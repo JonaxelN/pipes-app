@@ -1,0 +1,37 @@
+<p-panel [showHeader]="false" class="p-2">
+  <h1>Pipes Básicos</h1>
+  <p>Pipes incluidos en Angular -  Usualmente en el Common Module</p>
+</p-panel>
+
+<div class="grid mt-2">
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{ upper | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="lowercase">
+      {{ lower | lowercase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="titlecase">
+      {{ title | titlecase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="date">
+      <ul>
+        <li>{{ customDate | date }}</li>
+        <li>{{ customDate | date:'short' }}</li>
+        <li>{{ customDate | date:'MMMM' }}</li>
+        <li>{{ customDate | date:'MMM, dd, yyyy' }}</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>{{ customDate | date:'long':'GMT-4' }}</li>
+        <li>{{ customDate | date:'long':'GMT-4':'es-MX' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
